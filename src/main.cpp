@@ -3,7 +3,8 @@
 
 
 int main() {
-	image IMG(360, 360);	
-	
+	image test(360, 360);
+	test.fill(char(255), 0, 0);
+	test.save("img.ppm");
 
 }
