@@ -11,4 +11,5 @@ opens and save .ppm files
 For compiling code use make command:
 
 make		-compiles source code
+
 make clean	-cleans all binaries
