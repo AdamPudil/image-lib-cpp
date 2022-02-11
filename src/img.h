@@ -9,7 +9,10 @@ private:
 
 public:
 	//image manipulation
-	void fill(char red, char green, char blue);
+	void setPixel(int x, int y, char r, char g, char b);
+	void drawRect(int x1, int y1, int x2, int y2, char r, char g, char b);
+	void drawCircle(int x, int y, int radius, char r, char g, char b);
+	void fill(char r, char g, char b);
 
 	//file manipulation
 	int save(const char * filename);

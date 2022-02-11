@@ -3,8 +3,9 @@
 
 
 int main() {
-	image test(0, 0);
-	if(test.open("img.ppm") != 0) printf("cannot open file");
+	image test(360, 360);
+	test.fill(char(255), 0, 0);
+	test.drawRect(100, 100, 200, 200, 0, char(255), 0);
 	test.save("test.ppm");
 
 }
