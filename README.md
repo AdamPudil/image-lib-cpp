@@ -2,4 +2,4 @@
 
 Simple cpp library for using .ppm image format (loading, saving, editing)
 
-
+## compilation
