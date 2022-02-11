@@ -8,9 +8,12 @@ private:
 	char * bitmap;
 
 public:
+	//image manipulation
 	void fill(char red, char green, char blue);
 
+	//file manipulation
 	int save(const char * filename);
+	int open(const char * filename);
 
 	image(int width, int height);
 	~image();
