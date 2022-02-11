@@ -3,7 +3,7 @@
 
 
 int main() {
+	image IMG(360, 360);	
 	
-
 
 }
