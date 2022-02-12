@@ -1,18 +1,27 @@
 #ifndef IMG_H
 #define IMG_H
 
+class RGB {
+public:
+	char r, g, b;
+
+	RGB(char r, char g, char b);
+	RGB();
+	~RGB();
+};
+
 class image {
 private:
 	int width;
 	int height;
-	char * bitmap;
+	RGB * bitmap;
 
 public:
 	//image manipulation
-	void setPixel(int x, int y, char r, char g, char b);
-	void drawRect(int x1, int y1, int x2, int y2, char r, char g, char b);
-	void drawCircle(int x, int y, int radius, char r, char g, char b);
-	void fill(char r, char g, char b);
+	void setPixel(int x, int y, RGB color);
+	void drawRect(int x1, int y1, int x2, int y2, RGB color);
+	void drawCircle(int x, int y, int radius, RGB color);
+	void fill(RGB color);
 
 	//file manipulation
 	int save(const char * filename);
