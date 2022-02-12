@@ -25,40 +25,53 @@ RGB::~RGB() {
 
 }
 
+//point class methods
+
+point::point(int x, int y) {
+	this->x = x;
+	this->y = y;
+
+}
+
+point::point() {
+	this->x = 0;
+	this->y = 0;
+
+}
+
+point::~point() {
+
+}
+
 //image class methods
 
 //drawing methods
 
-void image::setPixel(int x, int y, RGB color) {
-	int index = y * this->width + x;
+void image::setPixel(point a, RGB color) {
+	int index = a.y * this->width + a.x;
 	this->bitmap[index].r = color.r;		
 	this->bitmap[index].g = color.g;		
 	this->bitmap[index].b = color.b;		
 
 }
 
-void image::drawRect(int x1, int y1, int x2, int y2, RGB color) {
-	for(int x = x1; x < x2; x++) {
-		for(int y = y1; y < y2; y++) {
-			this->setPixel(x, y, color);
-
+void image::drawRect(point a, point b, RGB color) {
+	for(int x = a.x; x < b.x; x++) {
+		for(int y = a.y; y < b.y; y++) {
+			this->setPixel(point(x, y), color);
+	
 		}
 	}
 }
 
-void image::drawCircle(int x, int y, int radius, RGB color) {
+void image::drawCircle(point c, int radius, RGB color) {
 
 
 
 }
 
 void image::fill(RGB color) {
-	for(int x = 0; x < this->width; x++) {
-		for(int y = 0; y < this->height; y++) {
-			this->setPixel(x, y, color);
-		
-		}
-	}
+	drawRect(point(0, 0), point(this->width, this->height), color);
 }
 
 //file manipulation methods

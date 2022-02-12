@@ -7,10 +7,10 @@ int main() {
 	RGB green(0, char(255), 0);
 	RGB blue (0, 0, char(255));
 
-	image test(360, 360);
+	image test(400, 360);
 
-	test.fill(red);
-	test.drawRect(100, 100, 200, 200, blue);
+	test.fill(RGB(char(255), char(255), 0));
+	test.drawRect(point(100, 100), point(200, 200), blue);
 	test.save("test.ppm");
 
 }

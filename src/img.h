@@ -10,6 +10,16 @@ public:
 	~RGB();
 };
 
+class point {
+public:
+	int x;
+	int y;
+	
+	point(int x, int y);
+	point();
+	~point();
+};
+
 class image {
 private:
 	int width;
@@ -18,9 +28,9 @@ private:
 
 public:
 	//image manipulation
-	void setPixel(int x, int y, RGB color);
-	void drawRect(int x1, int y1, int x2, int y2, RGB color);
-	void drawCircle(int x, int y, int radius, RGB color);
+	void setPixel(point a, RGB color);
+	void drawRect(point a, point b, RGB color);
+	void drawCircle(point c, int radius, RGB color);
 	void fill(RGB color);
 
 	//file manipulation
